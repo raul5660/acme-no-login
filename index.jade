@@ -1,34 +1,43 @@
+//- <!DOCTYPE html>
 doctype html
 
 //- --
 
+//- <html>
 html
-	head
+    //- <head>
+    head
 
-	//- --
+    //- </head>
+    //- <body>
+    body
+        //- <div>
+        div
+            //- if theres no message it will default to the login prompt
+            if !message
+                //- <h1>No Login</h1>
+                h1 No Login
 
-	body
-		div
-			if !message
-				h1 No Login
+                //- <p>I Dare you! I double Dare you!!</p>
+                p I Dare you! I double Dare you!!
 
-				//- --
+                //- <form method="POST">
+                //-		<input type="text" name="user" autocomplete="off">
+                //-		<input type="password" name="pass" autocomplete="off">
+                //-		<input type="submit">
+                //- </form>
+                form(method="POST")
+                    input(type="text", name="user", autocomplete="off")
+                    input(type="password", name="pass", autocomplete="off")
 
-				p I Dare you! I double Dare you!!
+                    //- --
 
-				//- --
+                    input(type="submit")
 
-				form(method="POST")
-					input(type="text", name="user", autocomplete="off")
-					input(type="password", name="pass", autocomplete="off")
+                //- --
 
-					//- --
-
-					input(type="submit")
-
-				//- --
-
-			else
-				p=message
+            else
+                //- <p>message</p>
+                p=message
 
 //- --
